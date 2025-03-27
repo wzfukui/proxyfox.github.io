@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProxyFox - Efficient Browser Proxy Management Tool</title>
+  <meta name="description" content="ProxyFox is a simple-to-use Chrome extension that helps you easily manage and switch browser proxy settings, supporting single proxy, multiple proxy configurations, global whitelist, and more.">
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/proxyfox-logo-128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/proxyfox-logo-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/proxyfox-logo-16.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- Language Switch -->
+  <div class="language-switch">
+    <button id="lang-zh" class="language-btn">
+      <span>中文</span>
+    </button>
+    <button id="lang-en" class="language-btn active">
+      <span>English</span>
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <img src="../images/proxyfox-logo-128.png" alt="ProxyFox Logo">
+          <span class="logo-text">ProxyFox</span>
+        </a>
+        <button class="mobile-menu-btn">&#9776;</button>
+        <nav>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">Guide</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#download">Download</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Simple & Efficient Chrome Proxy Manager</h1>
+        <p>ProxyFox helps you easily manage proxy servers, quickly switch network environments, and improve browsing efficiency and security</p>
+        <a href="#download" class="btn">Download Now</a>
+        <a href="#features" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Features</h2>
+        <p>ProxyFox offers powerful features to meet your various proxy needs</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3>Multiple Proxy Configurations</h3>
+          <p>Create and manage multiple proxy configurations that can be quickly switched to adapt to different scenarios</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Global Whitelist</h3>
+          <p>Set global whitelist rules for specific websites to automatically bypass proxy access, improving user experience</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-th-list"></i>
+          </div>
+          <h3>Configuration-level Whitelist</h3>
+          <p>Set separate whitelist rules for each proxy configuration, flexibly controlling how different websites are accessed</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Safe & Reliable</h3>
+          <p>All configuration information is stored locally, no user data is collected, ensuring your privacy and security</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-language"></i>
+          </div>
+          <h3>Multi-language Support</h3>
+          <p>Supports Simplified Chinese, Traditional Chinese, Japanese and more, providing a friendly user experience for global users</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Import & Export Configuration</h3>
+          <p>One-click export and import of proxy configurations, easily synchronize your proxy settings across multiple devices</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2>User Guide</h2>
+        <p>Just a few simple steps to start using ProxyFox to manage your proxy configurations</p>
+      </div>
+      <div class="steps">
+        <div class="step scroll-element">
+          <div class="step-image" style="background-image: url('../images/step1.jpg');"></div>
+          <div class="step-content">
+            <span class="step-number">Step 1</span>
+            <h3>Install the Extension</h3>
+            <p>Download and install the ProxyFox extension from the Chrome Web Store. Once installed, the extension icon will appear in your browser toolbar.</p>
+          </div>
+        </div>
+        <div class="step scroll-element">
+          <div class="step-image" style="background-image: url('../images/step2.jpg');"></div>
+          <div class="step-content">
+            <span class="step-number">Step 2</span>
+            <h3>Add Proxy Configuration</h3>
+            <p>Click the extension icon to open the settings page, click the "Add Proxy" button, and enter the proxy server information, including server address, port, proxy type, etc.</p>
+          </div>
+        </div>
+        <div class="step scroll-element">
+          <div class="step-image" style="background-image: url('../images/step3.jpg');"></div>
+          <div class="step-content">
+            <span class="step-number">Step 3</span>
+            <h3>Set Whitelist</h3>
+            <p>Add whitelist rules in the proxy configuration to specify which websites to access directly without using a proxy, improving access speed and flexibility.</p>
+          </div>
+        </div>
+        <div class="step scroll-element">
+          <div class="step-image" style="background-image: url('../images/step4.jpg');"></div>
+          <div class="step-content">
+            <span class="step-number">Step 4</span>
+            <h3>Enable and Use</h3>
+            <p>Simply click on the proxy configuration you wish to use from the list to enable it. After enabling, please manually refresh your webpages for the settings to take effect. You can switch between different proxy configurations at any time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Learn about ProxyFox's usage tips and common question answers</p>
+      </div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>What types of proxies does ProxyFox support?</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>ProxyFox supports multiple proxy types, including HTTP, HTTPS, SOCKS4, and SOCKS5 proxies. You can choose the appropriate proxy type based on your needs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>How do I write whitelist rules?</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>ProxyFox supports multiple whitelist rule formats:</p>
+              <ul>
+                <li>Domain format: <code>example.com</code> - Matches the entire domain and its subdomains</li>
+                <li>Subdomain format: <code>*.example.com</code> - Matches all subdomains</li>
+                <li>IP address: <code>192.168.1.1</code> - Matches specific IPs</li>
+                <li>IP range: <code>192.168.1.1/24</code> - Matches IP ranges</li>
+                <li>IPv6 address: <code>2001:db8::</code> - Supports IPv6 format</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>How do I handle certificate issues with HTTPS proxies?</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>When using HTTPS proxies, Chrome will validate untrusted certificates. If you encounter certificate warnings, you need to manually add exceptions in Chrome settings:</p>
+              <ol>
+                <li>Type in the address bar: <code>chrome://flags/#allow-insecure-localhost</code></li>
+                <li>Set this option to "Enabled"</li>
+                <li>Restart the browser</li>
+              </ol>
+              <p>For certain specific sites, you can also temporarily accept certificates by clicking "Advanced" and then "Proceed".</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>How do I export and import proxy configurations?</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>In the ProxyFox settings page, you can:</p>
+              <ol>
+                <li>Click the "Export" button to export all current proxy configurations and global whitelist as a JSON file</li>
+                <li>On other devices, click the "Import" button and select the previously exported JSON file</li>
+                <li>All configurations will be imported to the new device</li>
+              </ol>
+              <p>Note: The import operation will overwrite all current configurations, so please proceed with caution.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>Does ProxyFox support automatic proxy switching?</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Currently, ProxyFox does not support rule-based automatic proxy switching. You need to manually switch between different proxy configurations. However, by setting reasonable whitelist rules, you can achieve automatic direct access for specific websites, improving the convenience of use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="cta">
+    <div class="container">
+      <h2>Experience ProxyFox Now</h2>
+      <p>Download and install the ProxyFox extension to start efficiently managing your proxy settings</p>
+      <a href="https://chrome.google.com/webstore/detail/proxyfox/ejgcljmgjglpeacggbhccbhhojjmkjci" class="btn" target="_blank">Download from Chrome Store</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../images/proxyfox-logo-128.png" alt="ProxyFox Logo">
+          <p>ProxyFox - Making proxy management simpler and more efficient</p>
+          <div class="social-links">
+            <a href="https://github.com/wzfukui/ProxyFox" class="social-icon" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">User Guide</a></li>
+            <li><a href="#download">Download</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="mailto:support@proxyfox.io">Contact Us</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">License Agreement</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 ProxyFox. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html> 

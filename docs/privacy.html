@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 - ProxyFox</title>
+  <meta name="description" content="ProxyFox 扩展的隐私政策，说明如何保护您的个人数据和隐私安全。">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/proxyfox-logo-128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/proxyfox-logo-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/proxyfox-logo-16.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .privacy-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.8;
+    }
+    .privacy-content h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+    .privacy-content h2 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .privacy-content h2::after {
+      width: 60px;
+      left: 0;
+      transform: none;
+    }
+    .privacy-content p {
+      margin-bottom: 15px;
+    }
+    .privacy-content ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    .privacy-content li {
+      margin-bottom: 10px;
+    }
+    .last-updated {
+      font-style: italic;
+      color: #666;
+      margin-top: 50px;
+      text-align: right;
+    }
+    .back-to-home {
+      display: inline-block;
+      margin-top: 30px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-to-home:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- 语言切换 -->
+  <div class="language-switch">
+    <button id="lang-zh" class="language-btn active">
+      <span>中文</span>
+    </button>
+    <button id="lang-en" class="language-btn">
+      <span>English</span>
+    </button>
+  </div>
+
+  <!-- 页头 -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="images/proxyfox-logo-128.png" alt="ProxyFox Logo">
+          <span class="logo-text">ProxyFox</span>
+        </a>
+        <button class="mobile-menu-btn">&#9776;</button>
+        <nav>
+          <ul>
+            <li><a href="index.html#features">功能特点</a></li>
+            <li><a href="index.html#how-it-works">使用指南</a></li>
+            <li><a href="index.html#faq">常见问题</a></li>
+            <li><a href="index.html#download">下载安装</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div style="height: 80px;"></div>
+
+  <!-- 隐私政策内容 -->
+  <section class="privacy-content">
+    <h1>隐私政策</h1>
+    
+    <p>欢迎使用 ProxyFox 浏览器扩展程序。我们非常重视您的隐私和个人数据保护。本隐私政策详细说明了我们如何处理、保护和管理您使用 ProxyFox 扩展时的数据和隐私。</p>
+    
+    <h2>信息收集</h2>
+    <p>ProxyFox <strong>不收集任何个人身份信息</strong>，我们坚信您的浏览数据和代理配置应完全私密且只属于您自己。具体而言：</p>
+    <ul>
+      <li>所有代理配置信息仅存储在您的本地浏览器中，使用浏览器的本地存储功能</li>
+      <li>我们不收集、不存储、不传输您的浏览历史、代理服务器凭据或任何其他个人数据</li>
+      <li>我们不使用 Cookie 或类似技术跟踪您的使用习惯</li>
+      <li>我们不与任何第三方共享您的数据</li>
+    </ul>
+    
+    <h2>数据存储</h2>
+    <p>ProxyFox 扩展程序使用 Chrome 浏览器的本地存储 API (chrome.storage.local) 存储以下类型的数据：</p>
+    <ul>
+      <li>您创建的代理服务器配置（服务器地址、端口、代理类型等）</li>
+      <li>您设置的全局白名单和代理特定白名单规则</li>
+      <li>界面偏好设置（如语言选择）</li>
+    </ul>
+    <p>这些数据仅存储在您的设备上，不会传输到我们的服务器或任何第三方服务器。</p>
+    
+    <h2>权限说明</h2>
+    <p>ProxyFox 扩展程序请求以下权限，所有权限都直接用于提供核心功能：</p>
+    <ul>
+      <li><strong>proxy</strong>：用于设置和管理浏览器代理配置</li>
+      <li><strong>storage</strong>：用于存储您的代理设置和白名单规则</li>
+      <li><strong>webRequest</strong>和<strong>webRequestBlocking</strong>：用于根据白名单规则处理网络请求</li>
+    </ul>
+    <p>我们不会使用这些权限来收集或传输您的个人数据。</p>
+    
+    <h2>安全措施</h2>
+    <p>虽然我们不收集您的数据，但我们依然实施了以下安全措施来保护您的隐私：</p>
+    <ul>
+      <li>代码经过审查，确保不包含恶意功能</li>
+      <li>定期更新扩展程序修复潜在的安全漏洞</li>
+      <li>尊重并遵守 Chrome 应用商店的安全和隐私政策</li>
+    </ul>
+    
+    <h2>数据导出与删除</h2>
+    <p>ProxyFox 提供以下数据控制功能：</p>
+    <ul>
+      <li>您可以随时导出所有配置数据为 JSON 文件进行备份</li>
+      <li>卸载扩展程序将删除所有存储的配置数据</li>
+      <li>您可以在扩展程序中手动删除单个或所有代理配置</li>
+    </ul>
+    
+    <h2>第三方服务</h2>
+    <p>ProxyFox 不集成任何第三方分析、跟踪或广告服务。我们的扩展程序是完全独立的，不依赖外部服务运行。</p>
+    <p>请注意，当您使用代理服务器时，您的网络流量将通过您配置的代理服务器传输。ProxyFox 无法控制这些第三方代理服务器如何处理您的数据，请确保您信任所使用的代理服务提供商。</p>
+    
+    <h2>儿童隐私</h2>
+    <p>ProxyFox 扩展程序不针对 13 岁以下儿童设计或营销。我们不会故意收集 13 岁以下儿童的个人信息。</p>
+    
+    <h2>政策更新</h2>
+    <p>我们可能会不时更新本隐私政策。任何重大变更都会通过扩展程序更新渠道或网站通知。我们鼓励您定期查看本政策以了解我们如何保护您的信息。</p>
+    
+    <h2>联系我们</h2>
+    <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
+    <p>电子邮件：<a href="mailto:support@proxyfox.io">support@proxyfox.io</a></p>
+    
+    <p class="last-updated">最后更新日期：2025年3月26日</p>
+    
+    <a href="index.html" class="back-to-home">
+      <i class="fas fa-arrow-left"></i> 返回首页
+    </a>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/proxyfox-logo-128.png" alt="ProxyFox Logo">
+          <p>ProxyFox - 让代理管理更简单高效</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>产品</h4>
+          <ul>
+            <li><a href="index.html#features">功能特点</a></li>
+            <li><a href="index.html#how-it-works">使用指南</a></li>
+            <li><a href="index.html#download">下载安装</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>支持</h4>
+          <ul>
+            <li><a href="index.html#faq">常见问题</a></li>
+            <li><a href="mailto:support@proxyfox.io">联系我们</a></li>
+            <li><a href="#">问题反馈</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>法律</h4>
+          <ul>
+            <li><a href="privacy.html">隐私政策</a></li>
+            <li><a href="#">使用条款</a></li>
+            <li><a href="#">许可协议</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 ProxyFox. 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 

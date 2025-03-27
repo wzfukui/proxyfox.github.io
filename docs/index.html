@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProxyFox - 高效的浏览器代理管理工具</title>
+  <meta name="description" content="ProxyFox 是一款简单易用的 Chrome 扩展，帮助您轻松管理和切换浏览器代理设置，支持单代理、多代理配置、全局白名单等功能。">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/proxyfox-logo-128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/proxyfox-logo-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/proxyfox-logo-16.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- 语言切换 -->
+  <div class="language-switch">
+    <button id="lang-zh" class="language-btn active">
+      <span>中文</span>
+    </button>
+    <button id="lang-en" class="language-btn">
+      <span>English</span>
+    </button>
+  </div>
+
+  <!-- 页头 -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <img src="images/proxyfox-logo-128.png" alt="ProxyFox Logo">
+          <span class="logo-text">ProxyFox</span>
+        </a>
+        <button class="mobile-menu-btn">&#9776;</button>
+        <nav>
+          <ul>
+            <li><a href="#features">功能特点</a></li>
+            <li><a href="#how-it-works">使用指南</a></li>
+            <li><a href="#faq">常见问题</a></li>
+            <li><a href="#download">下载安装</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- 英雄区 -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>简单高效的 Chrome 代理管理工具</h1>
+        <p>ProxyFox 让您轻松管理代理服务器，快速切换网络环境，提高浏览效率和安全性</p>
+        <a href="#download" class="btn">立即下载</a>
+        <a href="#features" class="btn btn-secondary">了解更多</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 功能特点 -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>功能特点</h2>
+        <p>ProxyFox 提供多种强大功能，满足您的不同代理需求</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3>多代理配置</h3>
+          <p>支持创建和管理多个代理配置，可随时快速切换，适应不同场景需求</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>全局白名单</h3>
+          <p>设置全局白名单规则，特定网站自动绕过代理访问，提高使用体验</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-th-list"></i>
+          </div>
+          <h3>配置级白名单</h3>
+          <p>为每个代理配置单独设置白名单规则，灵活控制不同网站的访问方式</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>安全可靠</h3>
+          <p>本地存储所有配置信息，不收集任何用户数据，保障您的隐私安全</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-language"></i>
+          </div>
+          <h3>多语言支持</h3>
+          <p>支持简体中文、繁体中文、日文等多种语言，为全球用户提供友好使用体验</p>
+        </div>
+        <div class="feature-item scroll-element">
+          <div class="feature-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>配置导入导出</h3>
+          <p>一键导出导入代理配置，轻松在多台设备间同步您的代理设置</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使用指南 -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2>使用指南</h2>
+        <p>只需简单几步，即可开始使用 ProxyFox 管理您的代理配置</p>
+      </div>
+      <div class="steps">
+        <div class="step scroll-element">
+          <div class="step-image" style="background-image: url('images/step1.jpg');"></div>
+          <div class="step-content">
+            <span class="step-number">步骤 1</span>
+            <h3>安装扩展</h3>
+            <p>从 Chrome 网上应用店下载并安装 ProxyFox 扩展，安装完成后会在浏览器工具栏显示扩展图标。</p>
+          </div>
+        </div>
+        <div class="step scroll-element">
+          <div class="step-image" style="background-image: url('images/step2.jpg');"></div>
+          <div class="step-content">
+            <span class="step-number">步骤 2</span>
+            <h3>添加代理配置</h3>
+            <p>点击扩展图标打开设置页面，点击"添加代理"按钮，输入代理服务器信息，包括服务器地址、端口、代理类型等。</p>
+          </div>
+        </div>
+        <div class="step scroll-element">
+          <div class="step-image" style="background-image: url('images/step3.jpg');"></div>
+          <div class="step-content">
+            <span class="step-number">步骤 3</span>
+            <h3>设置白名单</h3>
+            <p>在代理配置中添加白名单规则，指定哪些网站不使用代理直接访问，提高访问速度和灵活性。</p>
+          </div>
+        </div>
+        <div class="step scroll-element">
+          <div class="step-image" style="background-image: url('images/step4.jpg');"></div>
+          <div class="step-content">
+            <span class="step-number">步骤 4</span>
+            <h3>启用并使用</h3>
+            <p>在代理列表中直接点击需要使用的代理配置即可启用。启用后，请手动刷新网页以使设置生效。您可以随时切换不同的代理配置。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>常见问题</h2>
+        <p>了解 ProxyFox 的使用技巧和常见问题解答</p>
+      </div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>ProxyFox 支持哪些类型的代理？</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>ProxyFox 支持多种代理类型，包括 HTTP、HTTPS、SOCKS4 和 SOCKS5 代理。您可以根据自己的需求选择合适的代理类型进行配置。</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>如何编写白名单规则？</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>ProxyFox 支持多种白名单规则格式：</p>
+              <ul>
+                <li>域名格式：<code>example.com</code> - 匹配整个域名及其子域名</li>
+                <li>子域名格式：<code>*.example.com</code> - 匹配所有子域名</li>
+                <li>IP 地址：<code>192.168.1.1</code> - 匹配特定 IP</li>
+                <li>IP 段：<code>192.168.1.1/24</code> - 匹配 IP 范围</li>
+                <li>IPv6 地址：<code>2001:db8::</code> - 支持 IPv6 格式</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>如何处理 HTTPS 代理的证书问题？</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>使用 HTTPS 代理时，Chrome 浏览器会对不受信任的证书进行验证。如遇到证书警告，您需要在 Chrome 设置中手动添加例外：</p>
+              <ol>
+                <li>在地址栏输入：<code>chrome://flags/#allow-insecure-localhost</code></li>
+                <li>将该选项设置为"启用"</li>
+                <li>重启浏览器</li>
+              </ol>
+              <p>对于某些特定站点，您也可以通过点击"高级"然后"继续访问"来临时接受证书。</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>如何导出和导入代理配置？</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>在 ProxyFox 设置页面中，您可以：</p>
+              <ol>
+                <li>点击"导出"按钮将当前所有代理配置和全局白名单导出为 JSON 文件</li>
+                <li>在其他设备上，点击"导入"按钮，选择之前导出的 JSON 文件</li>
+                <li>所有配置将被导入到新设备中</li>
+              </ol>
+              <p>注意：导入操作会覆盖当前的所有配置，请谨慎操作。</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>ProxyFox 是否支持自动切换代理？</h3>
+            <div class="accordion-icon"></div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>目前 ProxyFox 不支持基于规则的自动代理切换功能。您需要手动切换不同的代理配置。但通过合理设置白名单规则，可以实现特定网站自动绕过代理直接访问，提高使用便捷性。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载区域 -->
+  <section id="download" class="cta">
+    <div class="container">
+      <h2>立即体验 ProxyFox</h2>
+      <p>下载安装 ProxyFox 扩展，开始高效管理您的代理设置</p>
+      <a href="https://chrome.google.com/webstore/detail/proxyfox/ejgcljmgjglpeacggbhccbhhojjmkjci" class="btn" target="_blank">从 Chrome 商店下载</a>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/proxyfox-logo-128.png" alt="ProxyFox Logo">
+          <p>ProxyFox - 让代理管理更简单高效</p>
+          <div class="social-links">
+            <a href="https://github.com/wzfukui/ProxyFox" class="social-icon" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>产品</h4>
+          <ul>
+            <li><a href="#features">功能特点</a></li>
+            <li><a href="#how-it-works">使用指南</a></li>
+            <li><a href="#download">下载安装</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>支持</h4>
+          <ul>
+            <li><a href="#faq">常见问题</a></li>
+            <li><a href="mailto:support@proxyfox.io">联系我们</a></li>
+            <li><a href="#">问题反馈</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>法律</h4>
+          <ul>
+            <li><a href="privacy.html">隐私政策</a></li>
+            <li><a href="#">使用条款</a></li>
+            <li><a href="#">许可协议</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 ProxyFox. 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - ProxyFox</title>
+  <meta name="description" content="ProxyFox extension's privacy policy, explaining how we protect your personal data and privacy.">
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/proxyfox-logo-128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/proxyfox-logo-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/proxyfox-logo-16.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .privacy-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.8;
+    }
+    .privacy-content h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+    .privacy-content h2 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .privacy-content h2::after {
+      width: 60px;
+      left: 0;
+      transform: none;
+    }
+    .privacy-content p {
+      margin-bottom: 15px;
+    }
+    .privacy-content ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    .privacy-content li {
+      margin-bottom: 10px;
+    }
+    .last-updated {
+      font-style: italic;
+      color: #666;
+      margin-top: 50px;
+      text-align: right;
+    }
+    .back-to-home {
+      display: inline-block;
+      margin-top: 30px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-to-home:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Language Switch -->
+  <div class="language-switch">
+    <button id="lang-zh" class="language-btn">
+      <span>中文</span>
+    </button>
+    <button id="lang-en" class="language-btn active">
+      <span>English</span>
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="../images/proxyfox-logo-128.png" alt="ProxyFox Logo">
+          <span class="logo-text">ProxyFox</span>
+        </a>
+        <button class="mobile-menu-btn">&#9776;</button>
+        <nav>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#how-it-works">Guide</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#download">Download</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div style="height: 80px;"></div>
+
+  <!-- Privacy Policy Content -->
+  <section class="privacy-content">
+    <h1>Privacy Policy</h1>
+    
+    <p>Welcome to the ProxyFox browser extension. We value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we handle, protect, and manage your data and privacy when using the ProxyFox extension.</p>
+    
+    <h2>Information Collection</h2>
+    <p>ProxyFox <strong>does not collect any personally identifiable information</strong>. We firmly believe that your browsing data and proxy configurations should remain completely private and under your control. Specifically:</p>
+    <ul>
+      <li>All proxy configuration information is stored only in your local browser using the browser's local storage capabilities</li>
+      <li>We do not collect, store, or transmit your browsing history, proxy server credentials, or any other personal data</li>
+      <li>We do not use cookies or similar technologies to track your usage habits</li>
+      <li>We do not share your data with any third parties</li>
+    </ul>
+    
+    <h2>Data Storage</h2>
+    <p>The ProxyFox extension uses Chrome browser's local storage API (chrome.storage.local) to store the following types of data:</p>
+    <ul>
+      <li>Your created proxy server configurations (server addresses, ports, proxy types, etc.)</li>
+      <li>Global whitelist and proxy-specific whitelist rules you set up</li>
+      <li>Interface preferences (such as language selection)</li>
+    </ul>
+    <p>This data is stored only on your device and is never transmitted to our servers or any third-party servers.</p>
+    
+    <h2>Permissions Explanation</h2>
+    <p>The ProxyFox extension requests the following permissions, all of which are directly used to provide core functionality:</p>
+    <ul>
+      <li><strong>proxy</strong>: Used to set and manage browser proxy configurations</li>
+      <li><strong>storage</strong>: Used to store your proxy settings and whitelist rules</li>
+      <li><strong>webRequest</strong> and <strong>webRequestBlocking</strong>: Used to handle network requests according to whitelist rules</li>
+    </ul>
+    <p>We do not use these permissions to collect or transmit your personal data.</p>
+    
+    <h2>Security Measures</h2>
+    <p>Although we do not collect your data, we have implemented the following security measures to protect your privacy:</p>
+    <ul>
+      <li>Code review to ensure no malicious functionalities are included</li>
+      <li>Regular extension updates to fix potential security vulnerabilities</li>
+      <li>Respect for and compliance with Chrome Web Store's security and privacy policies</li>
+    </ul>
+    
+    <h2>Data Export and Deletion</h2>
+    <p>ProxyFox provides the following data control features:</p>
+    <ul>
+      <li>You can export all configuration data as a JSON file for backup at any time</li>
+      <li>Uninstalling the extension will delete all stored configuration data</li>
+      <li>You can manually delete individual or all proxy configurations within the extension</li>
+    </ul>
+    
+    <h2>Third-Party Services</h2>
+    <p>ProxyFox does not integrate any third-party analytics, tracking, or advertising services. Our extension is completely standalone and does not rely on external services to function.</p>
+    <p>Please note that when using proxy servers, your network traffic will be transmitted through the proxy servers you configure. ProxyFox has no control over how these third-party proxy servers handle your data, so please ensure you trust the proxy service providers you use.</p>
+    
+    <h2>Children's Privacy</h2>
+    <p>The ProxyFox extension is not designed for or marketed to children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+    
+    <h2>Policy Updates</h2>
+    <p>We may update this Privacy Policy from time to time. Any significant changes will be notified through the extension update channel or website. We encourage you to periodically review this policy to stay informed about how we are protecting your information.</p>
+    
+    <h2>Contact Us</h2>
+    <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at:</p>
+    <p>Email: <a href="mailto:support@proxyfox.io">support@proxyfox.io</a></p>
+    
+    <p class="last-updated">Last updated: March 26, 2025</p>
+    
+    <a href="index.html" class="back-to-home">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../images/proxyfox-logo-128.png" alt="ProxyFox Logo">
+          <p>ProxyFox - Making proxy management simpler and more efficient</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#how-it-works">User Guide</a></li>
+            <li><a href="index.html#download">Download</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="mailto:support@proxyfox.io">Contact Us</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">License Agreement</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 ProxyFox. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html> 
