@@ -51,8 +51,9 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
+        <p class="release-kicker">v1.4.1 · Chrome Web Store review pending</p>
         <h1>Simple & Efficient Chrome Proxy Manager</h1>
-        <p>ProxyFox helps you easily manage proxy servers, quickly switch network environments, and improve browsing efficiency and security</p>
+        <p>Switch trusted proxy configurations quickly, with strict authentication matching, connection tests, and rollback protection.</p>
         <a href="#download" class="btn">Download Now</a>
         <a href="#features" class="btn btn-secondary">Learn More</a>
       </div>
@@ -92,22 +93,22 @@
           <div class="feature-icon">
             <i class="fas fa-lock"></i>
           </div>
-          <h3>Safe & Reliable</h3>
-          <p>All configuration information is stored locally, no user data is collected, ensuring your privacy and security</p>
+          <h3>Strict Authentication Matching</h3>
+          <p>Credentials stay local and are supplied only when the proxy host and port exactly match the selected configuration</p>
         </div>
         <div class="feature-item scroll-element">
           <div class="feature-icon">
             <i class="fas fa-language"></i>
           </div>
-          <h3>Multi-language Support</h3>
-          <p>Supports Simplified Chinese, Traditional Chinese, Japanese and more, providing a friendly user experience for global users</p>
+          <h3>Pre-Save Connection Test</h3>
+          <p>Set the test URL and timeout, see apply and network timing separately, and automatically restore the previous setting</p>
         </div>
         <div class="feature-item scroll-element">
           <div class="feature-icon">
             <i class="fas fa-sync-alt"></i>
           </div>
-          <h3>Import & Export Configuration</h3>
-          <p>One-click export and import of proxy configurations, easily synchronize your proxy settings across multiple devices</p>
+          <h3>Atomic Changes & Safe Exports</h3>
+          <p>Switches, saves, deletes, and imports roll back on failure; exported configurations exclude proxy passwords by default</p>
         </div>
       </div>
     </div>
@@ -150,7 +151,7 @@
           <div class="step-content">
             <span class="step-number">Step 4</span>
             <h3>Enable and Use</h3>
-            <p>Simply click on the proxy configuration you wish to use from the list to enable it. After enabling, please manually refresh your webpages for the settings to take effect. You can switch between different proxy configurations at any time.</p>
+            <p>Click a proxy configuration in the popup to switch immediately. If needed, enable automatic refresh of the current page in settings.</p>
           </div>
         </div>
       </div>
@@ -201,13 +202,7 @@
           </div>
           <div class="accordion-content">
             <div class="accordion-body">
-              <p>When using HTTPS proxies, Chrome will validate untrusted certificates. If you encounter certificate warnings, you need to manually add exceptions in Chrome settings:</p>
-              <ol>
-                <li>Type in the address bar: <code>chrome://flags/#allow-insecure-localhost</code></li>
-                <li>Set this option to "Enabled"</li>
-                <li>Restart the browser</li>
-              </ol>
-              <p>For certain specific sites, you can also temporarily accept certificates by clicking "Advanced" and then "Proceed".</p>
+              <p>ProxyFox does not bypass Chrome certificate validation. If an HTTPS proxy performs TLS inspection, ask the network administrator to deploy a trusted root certificate and verify the proxy address and certificate purpose. Do not ignore certificate warnings or weaken browser security settings.</p>
             </div>
           </div>
         </div>
@@ -247,10 +242,15 @@
   <section id="download" class="cta">
     <div class="container">
       <h2>Experience ProxyFox Now</h2>
-      <p>Download and install the ProxyFox extension to start efficiently managing your proxy settings</p>
+      <p>v1.4.1 is pending Chrome Web Store review. You can also download the same ZIP directly from this site for manual loading.</p>
       <div class="download-buttons">
         <a href="https://chrome.google.com/webstore/detail/proxyfox/ejgcljmgjglpeacggbhccbhhojjmkjci" class="btn" target="_blank">Download from Chrome Store</a>
-        <a href="../download/ProxyFox-dev.zip" class="btn btn-secondary" target="_blank">Download Offline Package</a>
+        <a href="../download/proxyfox-v1.4.1.zip" class="btn btn-secondary" download>Download v1.4.1 ZIP</a>
+      </div>
+      <div class="release-proof" aria-label="Offline package verification">
+        <span>Direct site download</span>
+        <span>563 KB</span>
+        <code>SHA-256 7c36644d…b811411</code>
       </div>
     </div>
   </section>
@@ -293,11 +293,11 @@
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; 2025 ProxyFox. All rights reserved.</p>
+        <p>&copy; 2026 ProxyFox. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script src="../js/main.js"></script>
 </body>
-</html> 
+</html>

@@ -91,9 +91,11 @@ header {
 }
 
 .header-content {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 150px;
 }
 
 .logo {
@@ -184,6 +186,19 @@ nav li a:hover::after {
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.release-kicker {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 auto 22px;
+  padding: 7px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 13px !important;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 h1 {
@@ -483,6 +498,48 @@ h2::after {
   background: var(--light);
 }
 
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.download-buttons .btn-secondary {
+  margin-left: 0;
+}
+
+.release-proof {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+}
+
+.release-proof span + span::before {
+  content: '·';
+  margin-right: 16px;
+}
+
+.release-proof code {
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: rgba(26, 37, 48, 0.24);
+  color: white;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+a:focus-visible,
+button:focus-visible,
+.accordion-header:focus-visible {
+  outline: 3px solid var(--info);
+  outline-offset: 3px;
+}
+
 /* 页脚 */
 footer {
   background: var(--secondary-dark);
@@ -590,25 +647,41 @@ footer {
   h1 {
     font-size: 36px;
   }
-  
+
   h2 {
     font-size: 30px;
   }
-  
+
   .step {
     flex-direction: column !important;
   }
-  
+
   .step-image {
     min-height: 200px;
   }
 }
 
 @media (max-width: 768px) {
+  .header-content {
+    padding-right: 40px;
+  }
+
+  .language-switch {
+    top: 22px;
+    right: 55px;
+    gap: 4px;
+  }
+
+  .language-btn {
+    padding: 4px 8px;
+  }
+
   .mobile-menu-btn {
     display: block;
+    position: absolute;
+    right: 0;
   }
-  
+
   nav {
     position: fixed;
     top: 80px;
@@ -621,42 +694,60 @@ footer {
     opacity: 0;
     transition: var(--transition);
   }
-  
+
   nav.active {
     transform: translateY(0);
     opacity: 1;
   }
-  
+
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-  
+
   .features-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .btn {
     display: block;
     width: 100%;
     margin-bottom: 15px;
   }
-  
+
   .btn-secondary {
     margin-left: 0;
   }
-  
+
+  .download-buttons {
+    display: block;
+  }
+
   .footer-content {
     gap: 30px;
   }
-  
+
   .footer-logo {
     min-width: 100%;
   }
-  
+
   .footer-links {
     min-width: 28%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
 
@@ -664,39 +755,39 @@ footer {
   .container {
     width: 95%;
   }
-  
+
   h1 {
     font-size: 30px;
   }
-  
+
   .hero p {
     font-size: 16px;
   }
-  
+
   .feature-item {
     padding: 20px;
   }
-  
+
   .step-content {
     padding: 30px 20px;
   }
-  
+
   .footer-content {
     flex-direction: column;
     gap: 25px;
   }
-  
+
   .footer-links {
     min-width: 100%;
   }
-  
+
   .footer-links ul {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
   }
-  
+
   .footer-links li {
     margin-bottom: 0;
   }
-} 
+}

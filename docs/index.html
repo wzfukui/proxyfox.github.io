@@ -51,8 +51,9 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
+        <p class="release-kicker">v1.4.1 · Chrome 商店审核中</p>
         <h1>简单高效的 Chrome 代理管理工具</h1>
-        <p>ProxyFox 让您轻松管理代理服务器，快速切换网络环境，提高浏览效率和安全性</p>
+        <p>ProxyFox 让您快速切换可信代理配置，并通过严格认证匹配、连接测试与失败回滚保护每次切换。</p>
         <a href="#download" class="btn">立即下载</a>
         <a href="#features" class="btn btn-secondary">了解更多</a>
       </div>
@@ -92,22 +93,22 @@
           <div class="feature-icon">
             <i class="fas fa-lock"></i>
           </div>
-          <h3>安全可靠</h3>
-          <p>本地存储所有配置信息，不收集任何用户数据，保障您的隐私安全</p>
+          <h3>严格认证匹配</h3>
+          <p>凭据仅保存在本地，并只提供给主机与端口完全匹配的代理认证请求</p>
         </div>
         <div class="feature-item scroll-element">
           <div class="feature-icon">
             <i class="fas fa-language"></i>
           </div>
-          <h3>多语言支持</h3>
-          <p>支持简体中文、繁体中文、日文等多种语言，为全球用户提供友好使用体验</p>
+          <h3>保存前连接测试</h3>
+          <p>可配置测试地址与超时，分别显示代理应用和网络耗时，测试结束后自动恢复原设置</p>
         </div>
         <div class="feature-item scroll-element">
           <div class="feature-icon">
             <i class="fas fa-sync-alt"></i>
           </div>
-          <h3>配置导入导出</h3>
-          <p>一键导出导入代理配置，轻松在多台设备间同步您的代理设置</p>
+          <h3>原子切换与安全导出</h3>
+          <p>切换、保存、删除和导入失败时自动回滚；导出的配置默认不包含代理密码</p>
         </div>
       </div>
     </div>
@@ -150,7 +151,7 @@
           <div class="step-content">
             <span class="step-number">步骤 4</span>
             <h3>启用并使用</h3>
-            <p>在代理列表中直接点击需要使用的代理配置即可启用。启用后，请手动刷新网页以使设置生效。您可以随时切换不同的代理配置。</p>
+            <p>在弹窗中点击代理配置即可切换。设置会立即生效；如有需要，可在设置中开启切换后自动刷新当前页面。</p>
           </div>
         </div>
       </div>
@@ -201,13 +202,7 @@
           </div>
           <div class="accordion-content">
             <div class="accordion-body">
-              <p>使用 HTTPS 代理时，Chrome 浏览器会对不受信任的证书进行验证。如遇到证书警告，您需要在 Chrome 设置中手动添加例外：</p>
-              <ol>
-                <li>在地址栏输入：<code>chrome://flags/#allow-insecure-localhost</code></li>
-                <li>将该选项设置为"启用"</li>
-                <li>重启浏览器</li>
-              </ol>
-              <p>对于某些特定站点，您也可以通过点击"高级"然后"继续访问"来临时接受证书。</p>
+              <p>ProxyFox 不会绕过 Chrome 的证书校验。如果 HTTPS 代理执行 TLS 解密，请由网络管理员部署受信任的根证书，并确认代理地址与证书用途正确。不要忽略证书警告或降低浏览器安全设置。</p>
             </div>
           </div>
         </div>
@@ -247,10 +242,15 @@
   <section id="download" class="cta">
     <div class="container">
       <h2>立即体验 ProxyFox</h2>
-      <p>下载安装 ProxyFox 扩展，开始高效管理您的代理设置</p>
+      <p>v1.4.1 已提交 Chrome 商店审核。也可以直接从本站下载同版本 ZIP，手动加载使用。</p>
       <div class="download-buttons">
         <a href="https://chrome.google.com/webstore/detail/proxyfox/ejgcljmgjglpeacggbhccbhhojjmkjci" class="btn" target="_blank">从 Chrome 商店下载</a>
-        <a href="download/ProxyFox-dev.zip" class="btn btn-secondary" target="_blank">下载离线安装包</a>
+        <a href="download/proxyfox-v1.4.1.zip" class="btn btn-secondary" download>下载 v1.4.1 ZIP</a>
+      </div>
+      <div class="release-proof" aria-label="离线安装包校验信息">
+        <span>本站直接下载</span>
+        <span>563 KB</span>
+        <code>SHA-256 7c36644d…b811411</code>
       </div>
     </div>
   </section>
@@ -293,11 +293,11 @@
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; 2025 ProxyFox. 保留所有权利。</p>
+        <p>&copy; 2026 ProxyFox. 保留所有权利。</p>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
 </body>
-</html> 
+</html>
