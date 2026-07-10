@@ -101,68 +101,63 @@
   <!-- Privacy Policy Content -->
   <section class="privacy-content">
     <h1>Privacy Policy</h1>
-    
-    <p>Welcome to the ProxyFox browser extension. We value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we handle, protect, and manage your data and privacy when using the ProxyFox extension.</p>
-    
-    <h2>Information Collection</h2>
-    <p>ProxyFox <strong>does not collect any personally identifiable information</strong>. We firmly believe that your browsing data and proxy configurations should remain completely private and under your control. Specifically:</p>
+
+    <p>Welcome to the ProxyFox browser extension. This Privacy Policy explains what data ProxyFox processes on your device to provide proxy management, how that data is used, and how you can control it.</p>
+
+    <h2>Data We Process</h2>
+    <p>ProxyFox does not collect your personal data on developer-operated servers. To provide the proxy management features you choose to use, the extension processes the following data locally:</p>
     <ul>
-      <li>All proxy configuration information is stored only in your local browser using the browser's local storage capabilities</li>
-      <li>We do not collect, store, or transmit your browsing history, proxy server credentials, or any other personal data</li>
-      <li>We do not use cookies or similar technologies to track your usage habits</li>
-      <li>We do not share your data with any third parties</li>
+      <li>Proxy server configurations, including names, protocols, hosts, ports, and bypass rules</li>
+      <li>Proxy authentication usernames and passwords that you choose to enter</li>
+      <li>Interface and behavior settings such as language, refresh-after-switch, connection test URL, and timeout</li>
+      <li>A temporary recovery record used to restore the previous proxy state during a connection test</li>
     </ul>
-    
-    <h2>Data Storage</h2>
-    <p>The ProxyFox extension uses Chrome browser's local storage API (chrome.storage.local) to store the following types of data:</p>
+    <p>ProxyFox does not read, record, or build your browsing history. It does not use cookies to track users and does not include analytics, advertising, or profiling services.</p>
+
+    <h2>Local Storage, Export, and Deletion</h2>
+    <p>The data above is stored in the current Chrome profile with <code>chrome.storage.local</code>. It is not synchronized or uploaded to ProxyFox servers.</p>
     <ul>
-      <li>Your created proxy server configurations (server addresses, ports, proxy types, etc.)</li>
-      <li>Global whitelist and proxy-specific whitelist rules you set up</li>
-      <li>Interface preferences (such as language selection)</li>
+      <li>You can edit or delete proxy configurations at any time</li>
+      <li>Exports exclude usernames and passwords by default; credentials are written to the local JSON export only when you explicitly enable "Include authentication information"</li>
+      <li>Chrome removes the extension's local storage when you uninstall the extension</li>
+      <li>The connection test recovery record is removed when the test or a later recovery completes</li>
     </ul>
-    <p>This data is stored only on your device and is never transmitted to our servers or any third-party servers.</p>
-    
+
+    <h2>Network Requests and Third-Party Proxies</h2>
+    <p>When you activate a proxy configuration, Chrome routes network traffic through the proxy server you selected. You provide and control that proxy server. ProxyFox cannot control how it handles data, so only use proxy providers you trust.</p>
+    <p>When you explicitly select "Test connection," the extension sends one request through the candidate proxy to the test URL you configured. The default is <code>https://www.gstatic.com/generate_204</code>. The request can expose ordinary network information, such as your IP address and browser request information, to the proxy provider and test URL operator. ProxyFox does not receive this request data.</p>
+    <p>If a proxy requires authentication, the extension supplies saved credentials only when Chrome's proxy authentication challenge strictly matches the configured proxy host and port.</p>
+
     <h2>Permissions Explanation</h2>
-    <p>The ProxyFox extension requests the following permissions, all of which are directly used to provide core functionality:</p>
+    <p>ProxyFox requests only the permissions required for its single purpose: configuring, testing, and switching Chrome proxy settings.</p>
     <ul>
       <li><strong>proxy</strong>: Used to set and manage browser proxy configurations</li>
-      <li><strong>storage</strong>: Used to store your proxy settings and whitelist rules</li>
-      <li><strong>webRequest</strong> and <strong>webRequestBlocking</strong>: Used to handle network requests according to whitelist rules</li>
+      <li><strong>storage</strong>: Used to store proxy configurations, bypass rules, and preferences locally</li>
+      <li><strong>webRequest</strong>: Used to receive Chrome proxy authentication challenges</li>
+      <li><strong>webRequestAuthProvider</strong>: Used to provide saved credentials to strictly matching proxy authentication challenges</li>
+      <li><strong>&lt;all_urls&gt;</strong>: Required by Chrome's proxy authentication event filter; ProxyFox does not use it to read or modify page content</li>
     </ul>
-    <p>We do not use these permissions to collect or transmit your personal data.</p>
-    
-    <h2>Security Measures</h2>
-    <p>Although we do not collect your data, we have implemented the following security measures to protect your privacy:</p>
+
+    <h2>Data Sharing and Limited Use</h2>
     <ul>
-      <li>Code review to ensure no malicious functionalities are included</li>
-      <li>Regular extension updates to fix potential security vulnerabilities</li>
-      <li>Respect for and compliance with Chrome Web Store's security and privacy policies</li>
+      <li>ProxyFox does not sell, rent, or transfer your data to the developer or advertisers</li>
+      <li>ProxyFox does not use data for advertising, credit assessment, profiling, or purposes unrelated to proxy management</li>
+      <li>Except for the proxy server and connection test URL you select, or where required by law, we do not disclose data to third parties</li>
     </ul>
-    
-    <h2>Data Export and Deletion</h2>
-    <p>ProxyFox provides the following data control features:</p>
-    <ul>
-      <li>You can export all configuration data as a JSON file for backup at any time</li>
-      <li>Uninstalling the extension will delete all stored configuration data</li>
-      <li>You can manually delete individual or all proxy configurations within the extension</li>
-    </ul>
-    
-    <h2>Third-Party Services</h2>
-    <p>ProxyFox does not integrate any third-party analytics, tracking, or advertising services. Our extension is completely standalone and does not rely on external services to function.</p>
-    <p>Please note that when using proxy servers, your network traffic will be transmitted through the proxy servers you configure. ProxyFox has no control over how these third-party proxy servers handle your data, so please ensure you trust the proxy service providers you use.</p>
-    
+    <p>ProxyFox's use of information received from Chrome APIs complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+
     <h2>Children's Privacy</h2>
     <p>The ProxyFox extension is not designed for or marketed to children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
-    
+
     <h2>Policy Updates</h2>
     <p>We may update this Privacy Policy from time to time. Any significant changes will be notified through the extension update channel or website. We encourage you to periodically review this policy to stay informed about how we are protecting your information.</p>
-    
+
     <h2>Contact Us</h2>
     <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at:</p>
     <p>Email: <a href="mailto:support@proxyfox.io">support@proxyfox.io</a></p>
-    
-    <p class="last-updated">Last updated: March 26, 2025</p>
-    
+
+    <p class="last-updated">Last updated: July 10, 2026</p>
+
     <a href="index.html" class="back-to-home">
       <i class="fas fa-arrow-left"></i> Back to Home
     </a>
@@ -213,4 +208,4 @@
 
   <script src="../js/main.js"></script>
 </body>
-</html> 
+</html>
