@@ -1,0 +1,13 @@
+{
+  "name": "ProxyFox",
+  "short_name": "ProxyFox",
+  "description": "Open-source Chrome proxy switcher",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#0d2b3b",
+  "icons": [
+    {"src": "/images/proxyfox-logo-32.png", "sizes": "32x32", "type": "image/png"},
+    {"src": "/images/proxyfox-logo-128.png", "sizes": "128x128", "type": "image/png"}
+  ]
+}

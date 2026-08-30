@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chrome 代理白名单与绕过规则｜ProxyFox</title><meta name="description" content="使用域名、通配符、IP、CIDR、IPv6 和注释维护 Chrome 代理白名单与直连规则。"><link rel="canonical" href="https://proxyfox.io/guides/proxy-bypass-list/"><link rel="alternate" hreflang="zh-CN" href="https://proxyfox.io/guides/proxy-bypass-list/"><link rel="alternate" hreflang="en" href="https://proxyfox.io/en/guides/proxy-bypass-list/"><link rel="alternate" hreflang="x-default" href="https://proxyfox.io/en/guides/proxy-bypass-list/"><meta property="og:type" content="article"><meta property="og:title" content="Chrome 代理白名单与绕过规则"><meta property="og:image" content="https://proxyfox.io/images/proxyfox-social-card.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="../../css/styles.css"><link rel="icon" href="../../favicon.ico"></head><body>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="/"><img src="../../images/proxyfox-logo-128.png" width="38" height="38" alt=""><span>ProxyFox</span></a><nav class="site-nav" data-open="false"><a href="/#features">功能</a><a href="/#guides" aria-current="page">指南</a><a href="../../compare/switchyomega-alternative/">比较</a></nav><div class="nav-utility"><a class="github-link" href="https://github.com/wzfukui/ProxyFox">GitHub</a><a class="language-link" href="/en/guides/proxy-bypass-list/">English</a><button class="menu-button" aria-label="打开菜单" aria-expanded="false">☰</button></div></div></header>
+<main><section class="article-hero"><div class="container"><div class="breadcrumbs"><a href="/">ProxyFox</a><span>/</span><a href="/#guides">指南</a><span>/</span><span>绕过规则</span></div><div class="article-header"><p class="eyebrow">Proxy bypass list</p><h1>写出可读、可维护的代理白名单</h1><p>白名单中的目标会直接连接，不经过当前代理。规则越明确，排查网络行为越容易。</p></div></div></section><div class="container article-layout"><article class="article-body">
+<h2 id="formats">支持的规则格式</h2><pre><code># 本地开发
+localhost
+127.0.0.1
+
+# 企业域名
+*.company.example  # 同时覆盖根域名
+
+# 私有网络
+10.0.0.0/8
+[::1]/128</code></pre><p>每行一条规则。支持域名、通配符域名、IPv4、CIDR、IPv6，以及以 <code>#</code> 开始的整行或行内注释。</p>
+<h2 id="wildcard">通配符的含义</h2><p><code>*.example.com</code> 会标准化为 Chrome 可识别的绕过规则，并覆盖根域名 <code>example.com</code>。不要写路径、查询参数或协议；绕过列表按主机匹配，不是 URL 路由器。</p>
+<h2 id="scope">全局与配置级规则</h2><p>全局白名单适合所有代理都应直连的目标，例如本地开发服务和企业内网。配置级白名单只属于某个代理。启用“使用全局白名单”时，两组规则会合并。</p>
+<h2 id="practice">维护建议</h2><ul><li>用注释说明规则的业务原因，而不只是重复域名。</li><li>优先使用最小必要范围，避免过宽的通配符。</li><li>修改全局规则后测试至少一个代理配置。</li><li>遇到目标没有走代理时，先搜索是否被全局或配置级规则覆盖。</li><li>定期导出不含凭据的备份，便于审查变化。</li></ul>
+<h2 id="limits">它不是自动切换规则</h2><p>ProxyFox 的白名单只决定哪些目标绕过当前代理。它不会根据不同网站自动选择不同代理配置；需要这种能力时，应选择支持 PAC 或规则路由的工具。</p>
+</article><aside class="article-aside"><h2>本页内容</h2><ol><li><a href="#formats">规则格式</a></li><li><a href="#wildcard">通配符</a></li><li><a href="#scope">作用范围</a></li><li><a href="#practice">维护建议</a></li><li><a href="#limits">能力边界</a></li></ol><a class="button button-dark" href="https://chromewebstore.google.com/detail/proxyfox/ejgcljmgjglpeacggbhccbhhojjmkjci">安装 ProxyFox</a></aside></div></main><footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 ProxyFox</span><span><a href="/privacy.html">隐私政策</a> · <a href="https://github.com/wzfukui/ProxyFox">源代码</a></span></div></div></footer><script src="../../js/main.js"></script></body></html>
