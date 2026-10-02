@@ -23,20 +23,11 @@
   <link rel="apple-touch-icon" href="images/proxyfox-logo-128.png">
   <link rel="stylesheet" href="css/styles.css">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "ProxyFox",
-    "applicationCategory": "BrowserApplication",
-    "operatingSystem": "Chrome 114+",
-    "softwareVersion": "1.4.3",
-    "description": "面向开发、测试和企业网络的开源 Chrome 代理切换器。",
-    "url": "https://proxyfox.io/",
-    "downloadUrl": "https://proxyfox.io/download/proxyfox-v1.4.3.zip",
-    "license": "https://opensource.org/license/mit",
-    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-    "author": {"@type": "Organization", "name": "ProxyFox"}
-  }
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Organization","@id":"https://proxyfox.io/#organization","name":"ProxyFox","url":"https://proxyfox.io/","logo":"https://proxyfox.io/images/proxyfox-logo-128.png","sameAs":["https://github.com/wzfukui/ProxyFox","https://chromewebstore.google.com/detail/proxyfox/ejgcljmgjglpeacggbhccbhhojjmkjci"]},
+    {"@type":"WebSite","@id":"https://proxyfox.io/#website","url":"https://proxyfox.io/","name":"ProxyFox","inLanguage":["zh-CN","en"],"publisher":{"@id":"https://proxyfox.io/#organization"}},
+    {"@type":"SoftwareApplication","@id":"https://proxyfox.io/#software","name":"ProxyFox","applicationCategory":"BrowserApplication","operatingSystem":"Chrome 114+","softwareVersion":"1.4.3","description":"面向开发、测试和企业网络的开源 Chrome 代理切换器。","url":"https://proxyfox.io/","downloadUrl":"https://proxyfox.io/download/proxyfox-v1.4.3.zip","codeRepository":"https://github.com/wzfukui/ProxyFox","license":"https://opensource.org/license/mit","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@id":"https://proxyfox.io/#organization"},"featureList":["HTTP and HTTPS proxy profiles","SOCKS4 and SOCKS5 proxy profiles","Authenticated proxies","Proxy bypass rules","Connection test with rollback","Local import and export"]}
+  ]}
   </script>
 </head>
 <body>
@@ -45,7 +36,7 @@
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="ProxyFox 首页"><img src="images/proxyfox-logo-128.png" width="38" height="38" alt=""><span>ProxyFox</span></a>
       <nav class="site-nav" aria-label="主导航" data-open="false">
-        <a href="#workflow">工作方式</a><a href="#features">功能</a><a href="#guides">指南</a><a href="compare/switchyomega-alternative/">产品比较</a>
+        <a href="#workflow">工作方式</a><a href="#features">功能</a><a href="#guides">指南</a><a href="product-facts/">产品事实</a><a href="compare/switchyomega-alternative/">产品比较</a>
       </nav>
       <div class="nav-utility">
         <a class="github-link" href="https://github.com/wzfukui/ProxyFox">GitHub</a>
@@ -126,6 +117,10 @@
           <article class="guide-card"><span class="guide-label">Core guide</span><h3>Chrome 代理切换器使用指南</h3><p>理解系统代理、直连和扩展代理的区别，并完成第一份配置。</p><a href="guides/chrome-proxy-switcher/">阅读指南 →</a></article>
           <article class="guide-card"><span class="guide-label">SOCKS5</span><h3>在 Chrome 中配置 SOCKS5</h3><p>填写主机和端口、处理认证，并用连接测试验证配置。</p><a href="guides/socks5-proxy-chrome/">阅读指南 →</a></article>
           <article class="guide-card"><span class="guide-label">Bypass rules</span><h3>代理白名单与绕过规则</h3><p>用域名、通配符、CIDR 和注释维护清晰的直连规则。</p><a href="guides/proxy-bypass-list/">阅读指南 →</a></article>
+          <article class="guide-card"><span class="guide-label">Troubleshooting</span><h3>Chrome 代理未生效排查</h3><p>按网络、端点、协议、认证、路由和策略逐层定位问题。</p><a href="guides/chrome-proxy-not-working/">开始排查 →</a></article>
+          <article class="guide-card"><span class="guide-label">HTTP 407</span><h3>代理认证失败与 407</h3><p>处理重复认证弹窗、错误凭据和 IP 白名单授权。</p><a href="guides/chrome-proxy-authentication-407/">阅读指南 →</a></article>
+          <article class="guide-card"><span class="guide-label">Protocol guide</span><h3>HTTP、SOCKS5 与 VPN</h3><p>按作用范围、协议能力和安全边界选择正确方式。</p><a href="guides/http-https-socks5-vpn/">查看区别 →</a></article>
+          <article class="guide-card"><span class="guide-label">Product facts</span><h3>能力、权限与数据处理</h3><p>用一页可核对事实了解 ProxyFox 做什么、不做什么。</p><a href="product-facts/">核对产品事实 →</a></article>
           <article class="guide-card"><span class="guide-label">Honest comparison</span><h3>ProxyFox 与 SwitchyOmega / ZeroOmega</h3><p>比较手动切换、自动规则、迁移能力、复杂度和适用人群。</p><a href="compare/switchyomega-alternative/">查看比较 →</a></article>
         </div>
       </div>
@@ -144,12 +139,12 @@
     </section>
 
     <section class="cta-band" id="download">
-      <div class="container cta-grid"><div><h2>从可信配置开始切换。</h2><p class="release-note"><a href="download/proxyfox-v1.4.3.zip" download>下载 v1.4.3 ZIP</a> · 272,484 bytes · SHA-256 <code title="d118df3ab8e8a219e391e8afe5148d9fa8b4743f3a2ced36e8dd2578a380a547">d118df3a…380a547</code></p><p class="release-note">v1.4.3：保护未保存的修改，修复备份导入与代理测试恢复，改善窄窗口布局。Chrome 商店版单独更新。</p></div><div class="cta-actions"><a class="button" href="https://chromewebstore.google.com/detail/proxyfox/ejgcljmgjglpeacggbhccbhhojjmkjci">安装 Chrome 商店版 ↗</a></div></div>
+      <div class="container cta-grid"><div><h2>从可信配置开始切换。</h2><p class="release-note"><a href="download/proxyfox-v1.4.3.zip" download>下载 v1.4.3 ZIP</a> · 272,484 bytes · SHA-256 <code title="d118df3ab8e8a219e391e8afe5148d9fa8b4743f3a2ced36e8dd2578a380a547">d118df3a…380a547</code></p><p class="release-note">v1.4.3：保护未保存的修改，修复备份导入与代理测试恢复，改善窄窗口布局。</p></div><div class="cta-actions"><a class="button" href="https://chromewebstore.google.com/detail/proxyfox/ejgcljmgjglpeacggbhccbhhojjmkjci">安装 Chrome 商店版 ↗</a></div></div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="/"><img src="images/proxyfox-logo-128.png" width="38" height="38" alt=""><span>ProxyFox</span></a><p>面向开发、测试和企业网络的开源 Chrome 代理切换器。</p></div><div class="footer-column"><h2>产品</h2><ul><li><a href="#features">功能</a></li><li><a href="#download">安装</a></li><li><a href="compare/switchyomega-alternative/">产品比较</a></li></ul></div><div class="footer-column"><h2>支持</h2><ul><li><a href="#guides">使用指南</a></li><li><a href="https://github.com/wzfukui/ProxyFox/issues">反馈问题</a></li><li><a href="mailto:support@proxyfox.io">联系支持</a></li></ul></div><div class="footer-column"><h2>透明度</h2><ul><li><a href="privacy.html">隐私政策</a></li><li><a href="https://github.com/wzfukui/ProxyFox">源代码</a></li><li><a href="https://github.com/wzfukui/ProxyFox/blob/main/LICENSE">MIT License</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 ProxyFox</span><span>No account · No ads · No analytics</span></div></div>
+    <div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="/"><img src="images/proxyfox-logo-128.png" width="38" height="38" alt=""><span>ProxyFox</span></a><p>面向开发、测试和企业网络的开源 Chrome 代理切换器。</p></div><div class="footer-column"><h2>产品</h2><ul><li><a href="#features">功能</a></li><li><a href="#download">安装</a></li><li><a href="product-facts/">产品事实</a></li><li><a href="compare/switchyomega-alternative/">产品比较</a></li></ul></div><div class="footer-column"><h2>支持</h2><ul><li><a href="#guides">使用指南</a></li><li><a href="https://github.com/wzfukui/ProxyFox/issues">反馈问题</a></li><li><a href="mailto:support@proxyfox.io">联系支持</a></li></ul></div><div class="footer-column"><h2>透明度</h2><ul><li><a href="privacy.html">隐私政策</a></li><li><a href="https://github.com/wzfukui/ProxyFox">源代码</a></li><li><a href="https://github.com/wzfukui/ProxyFox/blob/main/LICENSE">MIT License</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 ProxyFox</span><span>No account · No ads · No analytics</span></div></div>
   </footer>
   <script src="js/main.js"></script>
 </body>
