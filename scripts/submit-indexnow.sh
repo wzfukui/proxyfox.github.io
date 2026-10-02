@@ -11,7 +11,7 @@ if [[ ! -f "$sitemap_path" ]]; then
   exit 1
 fi
 
-url_list="$(grep -o 'https://proxyfox\.io[^<]*' "$sitemap_path" | sort -u | jq -Rsc 'split("\n") | map(select(length > 0))')"
+url_list="$(grep -oE 'https://proxyfox\.io[^\"<]+' "$sitemap_path" | sort -u | jq -Rsc 'split("\n") | map(select(length > 0))')"
 payload="$(jq -n --arg host "$site_host" --arg key "$indexnow_key" --arg keyLocation "$key_location" --argjson urlList "$url_list" '{host:$host,key:$key,keyLocation:$keyLocation,urlList:$urlList}')"
 
 for attempt in {1..24}; do
